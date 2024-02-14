@@ -1,0 +1,32 @@
+### Stripe configuration
+
+# You can get a test publishable key from the Stripe dashboard: https://dashboard.stripe.com/test/apikeys
+# It has the `NEXT_PUBLIC_` prefix so that it can be used in the client-side code
+# This demo app can support three different regions by having separate platform accounts. This is to handle the
+# differing availability of Issuing and Treasury capabilities in these regions. You can create a platform account for
+# each region and use the corresponding publishable and secret keys here. Not all regions/key pairs are required to be
+# set up.
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_US="" # pk_live_51NbTx4FC5wUoVKGvlKOoaDcM5tGvzMMdy8ZLcTMztBniO5TrCYYojuuyW6Lqssw3RU88Vx5dFpelhnTgOcoQTKpa00XyzKejZg
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_UK="" #pk_live_51NbTx4FC5wUoVKGvlKOoaDcM5tGvzMMdy8ZLcTMztBniO5TrCYYojuuyW6Lqssw3RU88Vx5dFpelhnTgOcoQTKpa00XyzKejZg
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY_EU="" # pk_live_51NbTx4FC5wUoVKGvlKOoaDcM5tGvzMMdy8ZLcTMztBniO5TrCYYojuuyW6sk_live_51NbTx4FC5wUoVKGvU2GlpAsP5UsitYJMfkhWSVDI4wj2osQXxBUE7V8HByQmYSO4orcjQNwTl9dGcQmke14APoyP003HItrLuY
+STRIPE_SECRET_KEY_UK="" #
+STRIPE_SECRET_KEY_EU="" # 
+
+# The URL that will be redirected to after a user completes Connect Onboarding
+CONNECT_ONBOARDING_REDIRECT_URL="http://stripe.connect.univests.org"
+
+### Auth configuration
+
+# You can generate this using `openssl rand -base64 32`
+NEXTAUTH_SECRET=""
+# Your NextAuth base URL
+NEXTAUTH_URL="issuing-treasury-sxit:10000"
+
+### live configuration
+
+NEXT_PUBLIC_DEMO_MODE="true"
+
+### Database configuration
+
+DATABASE_URL="postgres://issuing_treasury:KNRZ4xkhpawo8JzvRy428KuCw4gyrLKN@dpg-cltar0q1hbls73ecatig-a/issuing_treasury_ipx6"
+POSTGRES_URL=${postgres://issuing_treasury:KNRZ4xkhpawo8JzvRy428KuCw4gyrLKN@dpg-cltar0q1hbls73ecatig-a/issuing_treasury_ipx6}
